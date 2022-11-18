@@ -10,20 +10,41 @@
 <body>
     <div class="title">
         <h1>Tic-Tac-Toe</h1>
+        <button id="play" type="button">Play</button>
     </div>
     <div class="container">
+        <div class="formholder">
+            <div>
+                <form id="form">
+                    <h2 class="playerHeader"><u>Player 1</u></h2><br>
+                    <label for="player1Name">Name:</label><br>
+                        <input type="text id="player1Name" class="player1Name" name="player1name"><br><br>
+                    <label>X's</label><input type="radio" name="markSelector" id="xMark"><br>
+                    <label>O's</label><input type="radio" name="markSelector" id="circleMark"><br><br>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <h2 class="playerHeader"><u>Player 2</u></h2><br>
+                    <label for="player2Name">Name:</label><br>
+                        <input type="text" id="player2Name" class="player2Name" name="player2Name"><br><br>
+                </form>
+            </div>
+            <button class="continue">Play</button>
+        </div>
+        <div class="cover"></div>
         <div class="holder">
-            <div class="square square1" data-index="0"></div>
-            <div class="square square2" data-index="1"></div>
-            <div class="square square3" data-index="2"></div>
-            <div class="square square4" data-index="3"></div>
-            <div class="square square5" data-index="4"></div>
-            <div class="square square6" data-index="5"></div>
-            <div class="square square7" data-index="6"></div>
-            <div class="square square8" data-index="7"></div>
-            <div class="square square9" data-index="8"></div>
+            <div class="square square1" data-cell></div>
+            <div class="square square2" data-cell></div>
+            <div class="square square3" data-cell></div>
+            <div class="square square4" data-cell></div>
+            <div class="square square5" data-cell></div>
+            <div class="square square6" data-cell></div>
+            <div class="square square7" data-cell></div>
+            <div class="square square8" data-cell></div>
+            <div class="square square9" data-cell></div>
         </div>
     </div>
-<script src="Script.js"></script>
+<script type="module" src="Script.js"></script>
 </body>
 </html>
