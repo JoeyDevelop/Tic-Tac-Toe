@@ -1,6 +1,6 @@
-This project is mostly finished. I have to add some small features and functionality before finally finishing the project for good.
+This Tic-Tac-Toe project was made as part of my The Odin Project curriculum. It took me a while as I decided to rewrite my JS script many times. Things I learned:
 
-Need to add:
- - Add player names and choose player marks.
- - Restart button
- - Better win announcement
+ - Increased familiarity with array methods.
+ - The difference between if else statements and switch statements and when one is better then the other.
+ - The basics of session storage.
+ - How to better organize my code (js file)

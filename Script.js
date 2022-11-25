@@ -2,6 +2,8 @@ let gameArray = ['', '', '', '', '', '', '', '', ''];
 let currentTurn = 'X'
 let boardLength = document.querySelectorAll('.square');
 let cover = document.querySelector('.cover');
+let winScreen = document.querySelector('.winScreen');
+winScreen.style['visibility'] = 'hidden';
 let winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -12,6 +14,15 @@ let winConditions = [
     [0, 4, 8],
     [2, 4, 6],
 ];
+
+// Set up game after playAgain Button
+window.onload = function() {
+    let reloading = sessionStorage.getItem("reloading");
+    if (reloading) {
+        sessionStorage.removeItem("reloading");
+        cover.style['visibility'] = 'hidden';
+    }
+};
 
 const playBtn = document.querySelector('#play');
 playBtn.addEventListener('click', () => {
@@ -69,6 +80,12 @@ playBtn.addEventListener('click', () => {
             currentTurn = 'X'
         };
     };
+
+    const playAgainBtn = document.querySelector('.playAgain');
+    playAgainBtn.addEventListener('click', () => {
+        sessionStorage.setItem("reloading", "true");
+        window.location.reload();
+    });
 })();
 
 function checkWin(currentTurn) {
@@ -77,13 +94,11 @@ function checkWin(currentTurn) {
         let a = gameArray[winCondition[0]];
         let b = gameArray[winCondition[1]];
         let c = gameArray[winCondition[2]];
-
-        console.log(a);
-        console.log(b);
-        console.log(c);
         if( a === '' || b === '' || c === '') {
             continue;
         } else if (a === b && b === c) {
-            alert('WINNER!')
+            winScreen.style['visibility'] = 'visible';
+            let winMsg = document.querySelector('.winMessage');
+            winMsg.innerHTML = `${currentTurn}'s Win!`
         };
 }};
