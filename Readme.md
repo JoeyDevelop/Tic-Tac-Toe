@@ -1,1 +1,6 @@
-This project is being made to practice my js problem-solving ability. I feel the code is messy, but my goal is to get it functioning first. After that, I plan to clean up my code and look at other Tic-Tac-Toe projects to see how I could've done things differently and what I could have done better.
+This project is mostly finished. I have to add some small features and functionality before finally finishing the project for good.
+
+Need to add:
+ - Add player names and choose player marks.
+ - Restart button
+ - Better win announcement
